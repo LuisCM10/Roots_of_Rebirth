@@ -15,6 +15,10 @@ run/main_scene="uid://yhmkuaql6cgv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+NavigationManage="*res://Script/navigation_manage.gd"
+
 [display]
 
 window/size/window_width_override=1280

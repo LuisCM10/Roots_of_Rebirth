@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://yhmkuaql6cgv"]
+[gd_scene load_steps=18 format=4 uid="uid://yhmkuaql6cgv"]
 
 [ext_resource type="Script" uid="uid://cjy62h0e1pfji" path="res://level.gd" id="1_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://clr8c2170pway" path="res://tiles/mainlevbuild.png" id="1_u52ul"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cknl7u5gqptee" path="res://player.tscn" id="3_km5ld"]
 [ext_resource type="Texture2D" uid="uid://bqpqcxb8r6wqe" path="res://candleA_02.png" id="4_1ainy"]
 [ext_resource type="Texture2D" uid="uid://b7t20vs2i6oib" path="res://candleB_04.png" id="5_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://dvyag7rvlmij0" path="res://Scene/Puerta.tscn" id="9_i2t4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oi3di"]
 texture = ExtResource("1_vonw3")
@@ -3230,3 +3231,17 @@ position = Vector2(-235, -401)
 
 [node name="MiniEnemySpawn19" type="Marker2D" parent="TilemapLayers/SpawnZones"]
 position = Vector2(-145, -453)
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Door_EL2" parent="Doors" instance=ExtResource("9_i2t4f")]
+position = Vector2(-31, -31)
+Nombre_Nivel_destino = "level"
+Nombre_Door_destino = "OL2"
+spawn_direction = "down"
+
+[node name="Door_OL2" parent="Doors" instance=ExtResource("9_i2t4f")]
+position = Vector2(1837, -667)
+Nombre_Nivel_destino = "level"
+Nombre_Door_destino = "EL2"
+spawn_direction = "right"

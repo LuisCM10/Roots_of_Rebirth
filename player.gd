@@ -1,7 +1,10 @@
 extends CharacterBody2D
-const speed = 150
-var life = 100
-var attack = 15
+
+class_name Player
+
+@export var speed = 150
+@export var life = 100
+@export var attack = 15
 var current_dir = "none"
 
 func _ready():
