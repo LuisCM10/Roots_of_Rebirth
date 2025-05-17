@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dup5sdt70clyy"]
+
+[ext_resource type="Script" uid="uid://cl3f7u7xkh6w2" path="res://Scene/lobby.gd" id="1_lvw4e"]
+[ext_resource type="Texture2D" uid="uid://dlm1si86011hx" path="res://data/mapa1.png" id="1_q1h5c"]
+[ext_resource type="PackedScene" uid="uid://cknl7u5gqptee" path="res://player.tscn" id="2_fubd8"]
+[ext_resource type="PackedScene" uid="uid://dvyag7rvlmij0" path="res://Scene/Puerta.tscn" id="2_lvw4e"]
+
+[node name="lobby" type="Node2D"]
+script = ExtResource("1_lvw4e")
+player_scene = ExtResource("2_fubd8")
+
+[node name="Mapa1" type="Sprite2D" parent="."]
+position = Vector2(-783, 541)
+texture = ExtResource("1_q1h5c")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Door_OL0" parent="Doors" instance=ExtResource("2_lvw4e")]
+position = Vector2(-958, -311)
+Nombre_Nivel_destino = "level"
+Nombre_Door_destino = "EL2"
+spawn_direction = "right"
+
+[node name="Spawn" parent="Doors/Door_OL0" index="1"]
+position = Vector2(0, 52)
+
+[editable path="Doors/Door_OL0"]

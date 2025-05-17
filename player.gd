@@ -8,7 +8,12 @@ class_name Player
 var current_dir = "none"
 
 func _ready():
+	NavigationManage.on_trigger_player_spawn.connect(_on_spawn)
 	$AnimatedSprite2D.play("front_idle")
+	
+func _on_spawn (positione : Vector2, direction: String):
+	global_position = positione
+	$AnimatedSprite2D.play(direction+"_idle")
 
 func _physics_process(delta):
 	player_movement(delta)

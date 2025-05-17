@@ -3232,16 +3232,26 @@ position = Vector2(-235, -401)
 [node name="MiniEnemySpawn19" type="Marker2D" parent="TilemapLayers/SpawnZones"]
 position = Vector2(-145, -453)
 
-[node name="Doors" type="Node2D" parent="."]
+[node name="Doors" type="Node2D" parent="TilemapLayers"]
+position = Vector2(96, 109)
 
-[node name="Door_EL2" parent="Doors" instance=ExtResource("9_i2t4f")]
-position = Vector2(-31, -31)
-Nombre_Nivel_destino = "level"
-Nombre_Door_destino = "OL2"
-spawn_direction = "down"
+[node name="Door_EL2" parent="TilemapLayers/Doors" instance=ExtResource("9_i2t4f")]
+position = Vector2(-31, 0)
+Nombre_Nivel_destino = "lobby"
+Nombre_Door_destino = "OL0"
+spawn_direction = "left"
 
-[node name="Door_OL2" parent="Doors" instance=ExtResource("9_i2t4f")]
-position = Vector2(1837, -667)
-Nombre_Nivel_destino = "level"
-Nombre_Door_destino = "EL2"
-spawn_direction = "right"
+[node name="Spawn" parent="TilemapLayers/Doors/Door_EL2" index="1"]
+position = Vector2(82, 0)
+
+[node name="Door_OL2" parent="TilemapLayers/Doors" instance=ExtResource("9_i2t4f")]
+position = Vector2(1837, -678)
+Nombre_Nivel_destino = "lobby"
+Nombre_Door_destino = "OL0"
+spawn_direction = "left"
+
+[node name="Spawn" parent="TilemapLayers/Doors/Door_OL2" index="1"]
+position = Vector2(0, 55)
+
+[editable path="TilemapLayers/Doors/Door_EL2"]
+[editable path="TilemapLayers/Doors/Door_OL2"]
