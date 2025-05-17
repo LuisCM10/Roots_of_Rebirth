@@ -13,7 +13,7 @@ func _physics_process(delta):
 	player_pos = player.position
 	direction = (player_pos - position).normalized()
 	
-	if position.distance_to(player_pos) < 350:
+	if position.distance_to(player_pos) < 200dwa:
 		velocity = direction * speed			
 	else:
 		velocity = Vector2.ZERO
